@@ -78,6 +78,8 @@ float up_ver=0.; //mm -> vertical motion in ascii file / added in 2018
 int spillnumb; //# -> spill number in ascii file
 int goniostep; //# -> scan step number in ascii file
 int eventnumb;//# -> events number in ascii file
+int tempo;//# -> time number in ascii file (added in 2018)
+int iev;//# -> iev ??? number in ascii file (added in 2018)
 
 float rotL; // rotation scan left margin
 float rotR; // rotation scan  right margin

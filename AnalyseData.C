@@ -103,7 +103,7 @@ sprintf(filesdir,"%s",argv[1]);
         do
         {
             itot++;
-            sprintf(filename,"%s/run%06d_multi_%06d.dat",filesdir,runnumb,i);
+            sprintf(filename,"%s/run%06d_%05d.dat",filesdir,runnumb,i);
             if((filein = fopen(filename, "r"))!=NULL){
                printf("OPENING FILE: %s --- %d on %d \n",filename,i,nfiles[ijk]);
 	       do{
@@ -585,7 +585,7 @@ sprintf(filesdir,"%s",argv[1]);
         
         do{
             itot++;
-	    sprintf(filename,"%s/run%06d_multi_%06d.dat",filesdir,runnumb,i);
+	    sprintf(filename,"%s/run%06d_%05d.dat",filesdir,runnumb,i);
             
             //printf("%s \n",filename); commented by Maiolino
             //if(fmod(i+1,5.)==0) printf("%s \n",filename);

@@ -106,21 +106,21 @@ if( (runnumb >= 300225)) {
 
 
 //DESY DAQ
-/*
+
 if(YEAR==2018 && MONTH==12){
      
-if( (runnumb < )) {   
+//if( (runnumb < 400000)) {   
 
 //Stefanino
 
-     calo_crys_tot_energy_gamma = (deva[3] + 71.) /98.525 ; //calorimetry function from calibration for gamma 2018 
+//     calo_crys_tot_energy_gamma = (deva[3] + 71.) /98.525 ; //calorimetry function from calibration for gamma 2018 
 
 //DEVA
 
-     calo_crys_tot_energy_efast = (deva[6] + 154.) / 97.725; //calorimetry function from calibration for fast electrons/positrons 2018
-     calo_crys_tot_energy_eslow = (deva[7] + 22.) / 85.; //calorimetry function from calibration for slow electrons/positrons 2018
+  //   calo_crys_tot_energy_efast = (deva[6] + 154.) / 97.725; //calorimetry function from calibration for fast electrons/positrons 2018
+    // calo_crys_tot_energy_eslow = (deva[7] + 22.) / 85.; //calorimetry function from calibration for slow electrons/positrons 2018
 
-     //scin=deva[0]; //scintillator signal 2018   
-     photom=deva[1]; //photomultiplier 2018
+     scin=deva[9]; //scintillator signal 2018   
+     //photom=deva[1]; //photomultiplier 2018
 }
-*/
+

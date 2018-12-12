@@ -162,3 +162,26 @@ if( (runnumb >= 300276) && (runnumb <= 300331))
     
     DEVA_CUT = 600.;
  } 
+
+  //DESY
+if( (runnumb >= 400000))// && (runnumb <= 300331))
+{
+    deflXmar1=-128.;    deflXmar2=128.;
+    deflYmar1=-128.;    deflYmar2=128.;
+    
+    thXin=128.;
+    thXout=128.;
+    
+    torsion_posYthX=0.;//murad on mm
+    //torsion_posXthX=0.;//20.;//murad on mm
+    meanchang = 0.;
+   
+    X_CUT_left  = 0.;  
+    X_CUT_right = 20000;
+    Y_CUT_left  = 0;//10000.;    
+    Y_CUT_right = 20000;//13800.;
+    //Y_CUT_left = 10500;    Y_CUT_right = 11500;
+    
+    DEVA_CUT = 600.;
+ } 
+

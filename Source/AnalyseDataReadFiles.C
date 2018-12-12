@@ -107,37 +107,30 @@
 
  }
 
-/*
+
 
  if(YEAR==2018 && MONTH==12){
-   // fscanf(filein,"%5d %5d", &time, &iev)
-   fscanf(filein,"%f %f %f %f %f %f", &(pos[0]),&(pos[1]),&(pos[2]),&(pos[3]),&(pos[4]),&(pos[5]),&(pos[6],&(pos[7]));
+   fscanf(filein,"%9d %5d", &(tempo), &(iev));
+   fscanf(filein,"%f %f %f %f %f %f %f %f", &(pos[0]),&(pos[1]),&(pos[2]),&(pos[3]),&(pos[4]),&(pos[5]),&(pos[6]),&(pos[7]));
 
-	  //    for(unsigned int i0=0;i0<6;i0++){
-	  //fscanf(filein,"%2d",&(nstrip[i0]));
-   
-    }
-    for(unsigned int i0=0;i0<7;i0++){
-        fscanf(filein,"%2d",&(cluster[i0]));
-      
-        
-    }
+
     for(unsigned int i0=0;i0<8;i0++){
-        fscanf(filein,"%5d",&(devabase[i0])); // 0-15 baseline?
+        fscanf(filein,"%2d",&(cluster[i0]));
+    }
+
+   fscanf(filein," %f %f %f %f %f %4d %4d",&(gonio_rot),&(gonio_crad),&(up_lin),&(up_lin_2),&(up_ver),&(spillnumb),&(goniostep));
+    for(unsigned int i0=0;i0<16;i0++){
+        fscanf(filein,"%5d",&(devabase[i0])); // 0-15 baseline [0-8=BGO calorimeter, 9 = S3]
         //std::cout << devabase[i0] << " ";
     }    
-    for(unsigned int i0=0;i0<8;i0++){
-        fscanf(filein,"%5d",&(deva[i0])); // 0-15 calo caounts (0-8 stefanino; 9-12 DEVA)?
-       
-        
+    for(unsigned int i0=0;i0<16;i0++){
+        fscanf(filein,"%5d",&(deva[i0])); // 0-15 pulse height  [0-8=BGO calorimeter, 9 = S3]
     }
-    for(unsigned int i0=0;i0<8;i0++){
-        fscanf(filein,"%3d",&(caldeva2[i0])); // time 0-8 stefanino; 9-12 DEVA?
-       
-        
+    for(unsigned int i0=0;i0<16;i0++){
+        fscanf(filein,"%3d",&(caldeva2[i0])); // 0-15 pulse height time [0-8=BGO calorimeter, 9 = S3](1 unit = 2 ns)
     }
-    fscanf(filein," %f %f %f %f %f %4d %4d %9d",&(gonio_rot),&(gonio_crad),&(up_lin),&(up_lin_2),&(up_ver),&(spillnumb),&(goniostep),&(eventnumb));
+   
     
 
  }
-*/
+
