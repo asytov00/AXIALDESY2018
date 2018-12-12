@@ -113,7 +113,8 @@ if(YEAR==2018 && MONTH==12){
 
 //Stefanino
 
-//     calo_crys_tot_energy_gamma = (deva[3] + 71.) /98.525 ; //calorimetry function from calibration for gamma 2018 
+  calo_crys_tot_energy =  (deva[0]+deva[1]+deva[2]+deva[3]+deva[4]+deva[5]+deva[6]+deva[7]+deva[8]);
+  calo_crys_tot_energy_gamma = (deva[0]+deva[1]+deva[2]+deva[3]+deva[4]+deva[5]+deva[6]+deva[7]+deva[8]); //calorimetry function from calibration for gamma 2018 
 
 //DEVA
 
@@ -121,6 +122,6 @@ if(YEAR==2018 && MONTH==12){
     // calo_crys_tot_energy_eslow = (deva[7] + 22.) / 85.; //calorimetry function from calibration for slow electrons/positrons 2018
 
      scin=deva[9]; //scintillator signal 2018   
-     //photom=deva[1]; //photomultiplier 2018
+
 }
 

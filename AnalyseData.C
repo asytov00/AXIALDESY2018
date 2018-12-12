@@ -717,13 +717,16 @@ sprintf(filesdir,"%s",argv[1]);
                         y1 = pos[1] / 0.0001 ;//cm -> microns
                         x2 = pos[2] / 0.0001 ;//cm -> microns // to analyse 2017 data change it to -->  x  = -pos[2]
                         y2 = pos[3] / 0.0001 ;//cm -> microns
-                        x3 = pos[4] / 0.0001 ;//cm -> microns
+			x3 = pos[4] / 0.0001 ;//cm -> microns		
                         y3 = pos[5] / 0.0001 ;//cm -> microns
                         x4 = pos[6] / 0.0001 ;//cm -> microns
                         y4 = pos[7] / 0.0001 ;//cm -> microns
                         x5 = pos[8] / 0.0001 ;//cm -> microns
                         y5 = pos[9] / 0.0001 ;//cm -> microns
-                        
+                       	if (YEAR==2018 && MONTH ==12){
+                        x3 = -pos[5] / 0.0001 ;//cm -> microns
+			y3 =  pos[4] / 0.0001 ;//cm -> microns
+			} 
                         
                         hx1na->Fill(x1);
                         hx2na->Fill(x2);
@@ -772,8 +775,8 @@ sprintf(filesdir,"%s",argv[1]);
                                 TCposYthX = torsion_posYthX * ( - yCRY ) * 1.E-3;
                                 //TCposXthY = torsion_posXthY * ( - xCRY ) * 1.E-3;
                                 //TCposXthX = torsion_posXthX * ( - xCRY ) * 1.E-3;
-                               // thYin += TCposXthY;
-                               // thYout += TCposXthY;
+                                //thYin += TCposXthY;
+                                // thYout += TCposXthY;
                                 thXin += TCposYthX;
                                 thXout += TCposYthX;
                               //  thXin += TCposXthX;
@@ -871,7 +874,7 @@ sprintf(filesdir,"%s",argv[1]);
 			 	if(YEAR==2018){ //inserted in 2018
                                     divcorr = +thXin; 
                                 }
-				
+			
                             }
                             else if(scanflag==2) divcorr = thYin;
                             else if(scanflag==0) divcorr = -xCRY*1.E-3+12.4; // to center for the lateral scan
@@ -883,6 +886,7 @@ sprintf(filesdir,"%s",argv[1]);
 			    else if(scanflag==5) h2st = up_ver;   //added in 2018
                             else if(scanflag==1) h2st = gonio_rot;
                             else if(scanflag==2) h2st = gonio_crad;
+			  
                             
                             if(GONIO_ZERO  && scanflag!=0)
                             {

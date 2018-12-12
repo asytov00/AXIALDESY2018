@@ -344,10 +344,10 @@ if(YEAR==2017 && MONTH==7){
 }
 
 if(YEAR==2018 && (MONTH==8 || MONTH==12)){
-    Z1 = Z118_1;
-    Z2 = Z218_1;
-    Zg = Zg18_1;
-    Z3 = Z318_1;
+    Z1 = Z118_1D;
+    Z2 = Z218_1D;
+    Zg = Zg18_1D;
+    Z3 = Z318_1D;
 
 //sprintf(filesdir,"/Users/taismaiolino/INFN_FERRARA/INFN_ROOT/AXIAL-Analysis/data2018"); ///data/Alexei/Channeling/Experiment/CERN2016/DATA_H4_2016/data_fe2/");
 //sprintf(filesdir,"/data/insudaq/ascii_axial18/");

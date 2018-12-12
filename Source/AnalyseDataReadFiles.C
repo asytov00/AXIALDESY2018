@@ -110,15 +110,16 @@
 
 
  if(YEAR==2018 && MONTH==12){
-   fscanf(filein,"%9d %5d", &(tempo), &(iev));
+   fscanf(filein,"%10d %9d", &(tempo), &(iev)); //tempo -> time; iev -> event index 
    fscanf(filein,"%f %f %f %f %f %f %f %f", &(pos[0]),&(pos[1]),&(pos[2]),&(pos[3]),&(pos[4]),&(pos[5]),&(pos[6]),&(pos[7]));
 
 
     for(unsigned int i0=0;i0<8;i0++){
-        fscanf(filein,"%2d",&(cluster[i0]));
+      fscanf(filein,"%2d",&(cluster[i0])); // 0-5 = clusters
     }
 
    fscanf(filein," %f %f %f %f %f %4d %4d",&(gonio_rot),&(gonio_crad),&(up_lin),&(up_lin_2),&(up_ver),&(spillnumb),&(goniostep));
+   gonio_rot = -gonio_rot;
     for(unsigned int i0=0;i0<16;i0++){
         fscanf(filein,"%5d",&(devabase[i0])); // 0-15 baseline [0-8=BGO calorimeter, 9 = S3]
         //std::cout << devabase[i0] << " ";

@@ -9,7 +9,7 @@
 
 #define N_RUNS 1
 
-#define RUN_NUMB  400712
+#define RUN_NUMB  400710
 
 #define RUN_NUMB2 300177
 #define RUN_NUMB3 300119
@@ -47,60 +47,52 @@
 ///////////////////////////////////////////////////////////////////////
 //////////////// Silicon Detector Position in meters///////////////////
 ///////////////////////////////////////////////////////////////////////
-#define Z110_1   0.          // SD1
-#define Z210_1   10.075      // SD2
-#define Zg10_1   10.574      // Goniometer-Crystal position
-#define Z310_1   20.678      // SD3
-#define Z410_1   21.051      // SD4
+#define Z110_1   0.        // SD1
+#define Z210_1   10.075    // SD2
+#define Zg10_1   10.574    // Goniometer-Crystal position
+#define Z310_1   20.678    // SD3
+#define Z410_1   21.051    // SD4
 
-#define Z112_1   00.000      // SD1
-#define Z212_1   10.008      // SD2
-#define Zg12_1   10.227      // Goniometer-Crystal position
-#define Z312_1   21.178      // SD3
+#define Z112_1   00.000    // SD1
+#define Z212_1   10.008    // SD2
+#define Zg12_1   10.227    // Goniometer-Crystal position
+#define Z312_1   21.178    // SD3
 
-#define Z114_1   0.000      // SD1
+#define Z114_1   0.000     // SD1
 #define Z214_1   5.37      // SD2
 #define Zg14_1   6.28      // Goniometer-Crystal position
-#define Z314_1   11.50      // SD3
+#define Z314_1   11.50     // SD3
 
 #define Z115_1   0.000      // SD1
 #define Z215_1   5.21      // SD2
 #define Zg15_1   5.57      // Goniometer-Crystal position
 #define Z315_1   12.03      // SD3
 
-#define Z116_1   0.000      // SD1
-#define Z216_1   5.6      // SD2
+#define Z116_1   0.000     // SD1
+#define Z216_1   5.6       // SD2
 #define Zg16_1   6.09      // Goniometer-Crystal position
 #define Z316_1   11.4      // SD3
 
-#define Z117_1   0.000      // SD1
-#define Z217_1   5.168      // SD2
+#define Z117_1   0.000     // SD1
+#define Z217_1   5.168     // SD2
 #define Zg17_1   5.821     // Goniometer-Crystal position
-#define Z317_1   11.521      // SD3
+#define Z317_1   11.521    // SD3
 
-#define Z118_1   0.000      // SD1?
+#define Z118_1   0.000     // SD1?
 #define Z218_1   11.9      // SD2?
-#define Zg18_1   12.375      // Goniometer-Crystal position?
-#define Z318_1   17.227      // SD3?
+#define Zg18_1   12.375    // Goniometer-Crystal position?
+#define Z318_1   17.227    // SD3?
 
-#define Z118_2   0.000      // SD1
+#define Z118_2   0.000     // SD1
 #define Z218_2   11.9      // SD2
-#define Zg18_2   12.375      // Goniometer-Crystal position?
-#define Z318_2   17.227      // SD3
+#define Zg18_2   12.375    // Goniometer-Crystal position?
+#define Z318_2   17.227    // SD3
 
-/*
-if (YEAR=2018 && MONTH=12){
-#define Z118_1        // SD1?
-#define Z218_1        // SD2?
-#define Zg18_1        // Goniometer-Crystal position?
-#define Z318_1        // SD3?
+#define Z118_1D  0.000     // SD1
+#define Z218_1D  0.676     // SD2
+#define Zg18_1D  0.946     // Goniometer-Crystal position
+#define Z318_1D  1.354     // SD3
 
-#define Z118_2        // SD1
-#define Z218_2        // SD2
-#define Zg18_2        // Goniometer-Crystal position?
-#define Z318_2        // SD3
 
- }
-*/
 
 #endif
