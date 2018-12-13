@@ -176,8 +176,8 @@ if( (runnumb >= 400000))// && (runnumb <= 300331))
     //torsion_posXthX=0.;//20.;//murad on mm
     meanchang = 0.;
    
-    X_CUT_left  = 0.;  
-    X_CUT_right = 20000;
+    X_CUT_left  = 6000.;  
+    X_CUT_right = 10300;
     Y_CUT_left  = 0;//10000.;    
     Y_CUT_right = 20000;//13800.;
     //Y_CUT_left = 10500;    Y_CUT_right = 11500;
