@@ -481,8 +481,39 @@ for (int ii111 = 0 ; ii111 <8 ; ii111++){
 if(flagpos) hgamma->Fill(calo_crys_tot_energy_gamma);
 if(flagpos) hefast->Fill(calo_crys_tot_energy_efast);
 if(flagpos) heslow->Fill(calo_crys_tot_energy_eslow);
-  
+
+he0->Fill(deva[0]);
+he1->Fill(deva[1]);
+he2->Fill(deva[2]);
+he3->Fill(deva[3]);
+he4->Fill(deva[4]);
+he5->Fill(deva[5]);
+he6->Fill(deva[6]);
+he7->Fill(deva[7]);
+he8->Fill(deva[8]);
+
+if(flagpos) he0P->Fill(deva[0]);
+if(flagpos) he1P->Fill(deva[1]);
+if(flagpos) he2P->Fill(deva[2]);
+if(flagpos) he3P->Fill(deva[3]);
+if(flagpos) he4P->Fill(deva[4]);
+if(flagpos) he5P->Fill(deva[5]);
+if(flagpos) he6P->Fill(deva[6]);
+if(flagpos) he7P->Fill(deva[7]);
+if(flagpos) he8P->Fill(deva[8]);
+
+
 //scan plots for gamma 2018
+if(flagpos) h2dX1in2018Ph_0->Fill((float)h2st+divcorr,deva[0]);
+if(flagpos) h2dX1in2018Ph_1->Fill((float)h2st+divcorr,deva[1]);
+if(flagpos) h2dX1in2018Ph_2->Fill((float)h2st+divcorr,deva[2]);
+if(flagpos) h2dX1in2018Ph_3->Fill((float)h2st+divcorr,deva[3]);
+if(flagpos) h2dX1in2018Ph_4->Fill((float)h2st+divcorr,deva[4]);
+if(flagpos) h2dX1in2018Ph_5->Fill((float)h2st+divcorr,deva[5]);
+if(flagpos) h2dX1in2018Ph_6->Fill((float)h2st+divcorr,deva[6]);
+if(flagpos) h2dX1in2018Ph_7->Fill((float)h2st+divcorr,deva[7]);
+if(flagpos) h2dX1in2018Ph_8->Fill((float)h2st+divcorr,deva[8]);
+
 if(flagpos) Crad2018Ph_gamma->Fill((float)h2st,calo_crys_tot_energy_gamma); 
 if(flagpos) Rot2018Ph_gamma->Fill((float)h2st,calo_crys_tot_energy_gamma);
 
@@ -569,7 +600,8 @@ if(flagpos) hCradScin_pinP->Fill((float)h2st+thYin,scin);
 if(flagpos) hCradScin_minP->Fill((float)h2st-thYin,scin);
 
 if(flagpos) hCradScinP->Fill((float)h2st,scin); 
-if(flagpos) hRotScinP->Fill((float)h2st,scin);
+//if(flagpos) hRotScinP->Fill((float)gonio_rot,scin);
+if(flagpos) hRotScinP->Fill((float)gonio_rot-thXin,scin);
 
 
 //Photomultiplier histograms 2018

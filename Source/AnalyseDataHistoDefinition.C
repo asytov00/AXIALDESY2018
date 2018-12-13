@@ -60,7 +60,7 @@ TH2F *hxy2P = new TH2F("hxy2P","Y Vs X for detector 2;X  [#mum];Y  [#mum]",detec
 ////////////////// Divergence Histograms  /////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 TH1F *hthXin = new TH1F("hthXin","In-going divergence (#theta_{x,in}) for X view;Horizontal Incoming Angle [#murad]"
-                        ,thXinBin,-thXin+0.5,thXin+0.5);
+                        ,500,-5000,5000);
 TH1F *hthYin = new TH1F("hthYin","In-going divergence (#theta_{y,in}) for Y view;Vertical Incoming Angle [#murad]"
                         ,thXinBin,-thXin+0.5,thXin+0.5);
 TH2F *hthXYin = new TH2F("hthXYin","In-going divergence (#theta_{x,in},#theta_{y,in});Horizontal Incoming Angle [#murad];Vertical Incoming Angle [#murad]",thXinBin,-thXin+4.,thXin+4.,thXinBin,-thXin+4.,thXin+4.);
@@ -185,9 +185,9 @@ TH2F *hdeflXthXinP_0 = new TH2F("hdeflXthXinP_0","X beam deflection (#Delta#thet
 ///////////////////////////////////////////////////////////////////////
 ///////////// Beam Deflection VS Position Histograms //////////////////
 ///////////////////////////////////////////////////////////////////////
-TH2F *hdeflXposX = new TH2F("hdeflXposX","X beam deflection  (#Delta#theta_{x}) Vs X position at the crystal (x_{in}); Horizontal Incoming Position [#mum];Horizontal Deflection Angle [#murad]",detectXBin,detectX1,detectX2,deflXBin,deflXmar1,deflXmar2);
+TH2F *hdeflXposX = new TH2F("hdeflXposX","X beam deflection  (#Delta#theta_{x}) Vs X position at the crystal (x_{in}); Horizontal Incoming Position [#mum];Horizontal Deflection Angle [#murad]",detectXBin,detectX1,detectX2,deflXBin,deflXmar1*10,deflXmar2*10);
 TH2F *hdeflXposXP = new TH2F("hdeflXposXP","X beam deflection  (#Delta#theta_{x}) Vs X position at the crystal (x_{in}); Horizontal Incoming Position [#mum];Horizontal Deflection Angle [#murad]",detectXBin,detectX1,detectX2,deflXBin,deflXmar1,deflXmar2);
-TH2F *hdeflXposY = new TH2F("hdeflXposY","X beam deflection  (#Delta#theta_{x}) Vs Y position at the crystal (y_{in}); Vertical Incoming Position [#mum]; Horizontal Deflection Angle [#murad]",detectYBin,detectY1,detectY2,deflXBin,deflXmar1,deflXmar2);
+TH2F *hdeflXposY = new TH2F("hdeflXposY","X beam deflection  (#Delta#theta_{x}) Vs Y position at the crystal (y_{in}); Vertical Incoming Position [#mum]; Horizontal Deflection Angle [#murad]",detectYBin,detectY1,detectY2,deflXBin,deflXmar1*10,deflXmar2*10);
 TH2F *hdeflXposYP = new TH2F("hdeflXposYP","X beam deflection  (#Delta#theta_{x}) Vs Y position at the crystal (y_{in}); Vertical Incoming Position [#mum]; Horizontal Deflection Angle [#murad]",detectYBin,detectY1,detectY2,deflXBin,deflXmar1,deflXmar2);
 TH2F *hdeflYposX = new TH2F("hdeflYposX","Y beam deflection  (#Delta#theta_{y}) Vs X position at the crystal (x_{in}); Horizontal Incoming Position [#mum];Vertical Deflection Angle [#murad]",detectXBin,detectX1,detectX2,deflYBin,deflYmar1,deflYmar2);
 TH2F *hdeflYposY = new TH2F("hdeflYposY","Y beam deflection  (#Delta#theta_{y}) Vs Y position at the crystal (y_{in}); Vertical Incoming Position [#mum]; Vertical Deflection Angle [#murad]",detectYBin,detectY1,detectY2,deflYBin,deflYmar1,deflYmar2);
@@ -527,6 +527,17 @@ double EmaxCalo = 140.5;
 int binCalo = (EmaxCalo - EminCalo) * 2.;
 
 //scan plots for gamma 2018
+TH2F *h2dX1in2018Ph_0 = new TH2F("h2dX1in2018Ph_0","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",100,-5000,5000,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_1 = new TH2F("h2dX1in2018Ph_1","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_2 = new TH2F("h2dX1in2018Ph_2","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_3 = new TH2F("h2dX1in2018Ph_3","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_4 = new TH2F("h2dX1in2018Ph_4","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_5 = new TH2F("h2dX1in2018Ph_5","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_6 = new TH2F("h2dX1in2018Ph_6","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_7 = new TH2F("h2dX1in2018Ph_7","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+TH2F *h2dX1in2018Ph_8 = new TH2F("h2dX1in2018Ph_8","Gamma: Calorimeter 4 Vs Goniometer rotation angle + X in-going angle (#theta_{x,in}) ; Horizontal Incoming Angle [#murad]; Energy [GeV]; Counts [a.u.]",(nbin+4)*2*10,rotSX,rotDX,binCalo,EminCalo,EmaxCalo*10);
+
+
 double binSizeCrad=(gonio_crad_last-gonio_crad_first)/Nsteps_crad;
 double binSizeRot=(gonio_rot_last-gonio_rot_first)/Nsteps_rot;
 TH2F *Crad2018Ph_gamma = new TH2F("Crad2018Ph_gamma","Gamma Vs Cradle Scan; Cradle Angle [#murad]; Energy [GeV]",Nsteps_crad+1,gonio_crad_first-0.5*binSizeCrad,gonio_crad_last+0.5*binSizeCrad,binCalo,EminCalo,EmaxCalo);
@@ -665,6 +676,26 @@ TH1F *hgamma = new TH1F("hgamma", "Gamma calorimemeter;Energy [GeV]",binCalo,Emi
 TH1F *hefast = new TH1F("hefast", "Fast e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo);
 TH1F *heslow = new TH1F("heslow", "Slow e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo);
 
+TH1F *he0 = new TH1F("he0", "0 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he1 = new TH1F("he1", "1 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he2 = new TH1F("he2", "2 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he3 = new TH1F("he3", "3 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he4 = new TH1F("he4", "4 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he5 = new TH1F("he5", "5 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he6 = new TH1F("he6", "6 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he7 = new TH1F("he7", "7 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he8 = new TH1F("he8", "8 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+
+TH1F *he0P = new TH1F("he0P", "0 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he1P = new TH1F("he1P", "1 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he2P = new TH1F("he2P", "2 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he3P = new TH1F("he3P", "3 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he4P = new TH1F("he4P", "4 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he5P = new TH1F("he5P", "5 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he6P = new TH1F("he6P", "6 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he7P = new TH1F("he7P", "7 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+TH1F *he8P = new TH1F("he8P", "8 e/e+ calorimeter; Energy [GeV]",binCalo,EminCalo,EmaxCalo*10);
+
 
 //////////////////////////////////
 //////Multitrack Histograms//////
@@ -715,16 +746,16 @@ TH1F *ScinP= new TH1F("ScinP","Scintillator; ADC counts;   ",400,-200,19800);
 TH2F *hthXinScinP= new TH2F("hthXinScinP","Scintillator VS X in-going angle (#theta_{x,in}); Horizontal Incoming Angle [#murad]; ADC counts",thXinBin,-thXin*2+0.5,thXin*2+0.5,400,-200,19800);
 TH2F *hthYinScinP= new TH2F("hthYinScinP","Scintillator VS Y in-going angle (#theta_{y,in}); Vertical Incoming Angle [#murad]; ADC counts",thXinBin,-thYin*4+0.5,thYin*4+0.5,400,-200,19800);
 
-TH2F *hRotScin_pinP = new TH2F("hRotScin_pinP","Scintillator Vs Rotational + X in-going angle (#theta_{x,in}); Scan Angle [#murad]; ADC counts",(nbin+4)*20,rotSX,rotDX,100,0,20000);
+TH2F *hRotScin_pinP = new TH2F("hRotScin_pinP","Scintillator Vs Rotational + X in-going angle (#theta_{x,in}); Scan Angle [#murad]; ADC counts",100,-50000,50000,100,0,20000);
 TH2F *hRotScin_minP = new TH2F("hRotScin_minP","Scintillator Vs Rotational - X in-going angle (#theta_{x,in}); Scan Angle [#murad]; ADC countsl",(nbin+4)*20,rotSX,rotDX,100,0,20000);
 
 TH2F *hCradScin_pinP = new TH2F("hCradScin_pinP", "Scintillator Vs Cradle + Y in-going angle (#theta_{x,in}); Scan Angle [#murad]; ADC counts",(nbin+4)*20,rotSX,rotDX,100,0,20000);
 TH2F *hCradScin_minP = new TH2F("hCradScin_minP","Scintillator Vs Cradle - Y in-going angle (#theta_{x,in}); Scan Angle [#murad]; ADC counts",(nbin+4)*20,rotSX,rotDX,100,0,20000);
 
-TH2F *hCradScinP = new TH2F("hCradScinP","Scintillator Vs Cradle Scan; Cradle Angle [#murad]; Scintillator signal",Nsteps_crad,rotSX,rotDX+1000,400,-200,19800);
+TH2F *hCradScinP = new TH2F("hCradScinP","Scintillator Vs Cradle Scan; Cradle Angle [#murad]; Scintillator signal",100,-5000,5000,400,-200,19800);
 //TH2F *CradScinP = new TH2F("CradScinP","Scintillator Vs Cradle Scan; Cradle Angle [#murad]; Scintillator signal",Nsteps_crad,gonio_crad_first-0.5*binSizeCrad,gonio_crad_last-0.5*binSizeCrad,400,-200,19800);
 
-TH2F *hRotScinP = new TH2F("hRotScinP","Scintillator Vs Rotational; Rotational Angle [#murad]; Scintillator signal",Nsteps_rot,gonio_rot_first-0.5*binSizeRot,gonio_rot_last-0.5*binSizeRot,400,-200,19800);
+TH2F *hRotScinP = new TH2F("hRotScinP","Scintillator Vs Rotational; Rotational Angle [#murad]; Scintillator signal",100,33000,39000,400,0,19800);
 
 //Photomultiplier histograms 2018
 
